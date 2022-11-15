@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import About from '../Components/About'
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 
@@ -9,10 +10,12 @@ export default function Home() {
         <title>Bigyan's Portfolio</title>
       </Head>
       <Header/>
-      <section id='hero' className='snap-center'>
+      <section id='hero' className='snap-start'>
         <Hero/>
       </section>
-      {/* About */}
+      <section id='about' className='snap-center'>
+        <About/>
+      </section>
       {/* Experience */}
       {/* Skills */}
       {/* Projects */}
