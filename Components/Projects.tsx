@@ -23,6 +23,7 @@ function Projects({}: Props) {
               y: -300,
               opacity: 0
             }}
+            key={i}
             transition={{duration: 1.2}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true}}

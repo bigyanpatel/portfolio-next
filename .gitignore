@@ -12,6 +12,8 @@
 /.next/
 /out/
 
+portfolio-next/node_modules
+
 # production
 /build
 

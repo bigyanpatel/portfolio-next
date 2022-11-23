@@ -14,7 +14,7 @@ export default function Home() {
         <title>Bigyan's Portfolio</title>
       </Head>
       <Header/>
-      <section id='hero' className='snap-start'>
+      <section id='hero' className='snap-center'>
         <Hero/>
       </section>
       <section id='about' className='snap-center'>
@@ -29,7 +29,7 @@ export default function Home() {
       <section id='projects' className='snap-start'>
         <Projects/>
       </section>
-      <section id='contactme' className='snap-start'>
+      <section id='contactMe' className='snap-start'>
         <ContactMe/>
       </section>
     </div>
