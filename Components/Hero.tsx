@@ -5,6 +5,7 @@ import Image from 'next/image'
 import mypic from '../Assets/profile.png'
 import Link from 'next/link';
 import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
 type Props = {
     pageInfo: PageInfo
@@ -24,14 +25,14 @@ export default function Hero({pageInfo}: Props) {
     return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles/>
-        <Image
+        <img
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={mypic}
+        src={urlFor(pageInfo?.profilePic).url()}
         alt="Picture of the author"
         />
         <div className='z-20'>
             <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
-                Frontend Developer
+                {pageInfo?.role}
             </h2>
             <h1 className='text-3xl lg:text-4xl font-semibold tracking-[15px]'>
                 <span className='mr-3'>{text}</span>
