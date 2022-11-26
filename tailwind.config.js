@@ -4,9 +4,6 @@ module.exports = {
     purge: {
       enabled: true,
       content: ["./pages/*.tsx","./Components/*.tsx"],
-      options: {
-        safeList: []
-      }
     },
   content: [
     "./pages/*.{js,ts,jsx,tsx}",
