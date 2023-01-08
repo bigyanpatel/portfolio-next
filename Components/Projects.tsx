@@ -31,10 +31,11 @@ function Projects({projects}: Props) {
             viewport={{once: true}}
             src={urlFor(project?.image).url()} 
             alt="Project Image Icon"
+            className='h-[200px] w-[300px] rounded-xl'
             />
 
             <div className='space-y-10 px-10 md:px-10 max-w-6xl'>
-              <h4 className='text-4xl font-semibold text-center'>
+              <h4 className='text-2xl font-semibold text-center md:text-4xl'>
                 <span className='uderline decoration-[#F7AB0A]/50'>
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
