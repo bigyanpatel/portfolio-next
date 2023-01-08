@@ -2,12 +2,16 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
+import { log } from 'console';
 
 type Props = {
   projects: Project[];
 }
 
 function Projects({projects}: Props) {
+  // const handleClick = (link) =>{
+  //   windows.
+  // }
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -20,24 +24,26 @@ function Projects({projects}: Props) {
       
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0284c7]/40'>
         {projects.map((project, i) => (
-          <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+          <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen'>
+            <a href=""></a>
             <motion.img
             initial={{
               y: -300,
               opacity: 0
             }}
+            onClick={() => window.open(`${project.linkToBuild}`, "_blank")}
             transition={{duration: 1.2}}
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true}}
             src={urlFor(project?.image).url()} 
             alt="Project Image Icon"
-            className='h-[200px] w-[300px] rounded-xl shadow-2xl'
+            className='h-[200px] w-[300px] rounded-xl shadow-2xl hover:cursor-pointer'
             />
 
             <div className='space-y-10 px-10 md:px-10 max-w-6xl'>
-              <h4 className='text-2xl font-semibold text-center md:text-4xl'>
+              <h4 className='text-lg font-semibold text-center md:text-4xl'>
                 <span className='uderline decoration-[#0ea5e9]/50'>
-                  Case Study {i + 1} of {projects.length}:
+                  Demo {i + 1} of {projects.length}:
                 </span>{" "}
                 {project?.title}
               </h4>
@@ -53,7 +59,7 @@ function Projects({projects}: Props) {
                 ))}
               </div>
 
-              <p className='text-lg text-center md:text-left'>
+              <p className='text-sm sm:text-lg text-center md:text-left'>
                 {project.summary}
               </p>
             </div>
