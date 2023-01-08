@@ -18,7 +18,7 @@ function Projects({projects}: Props) {
         Projects
       </h3>
       
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0284c7]/40'>
         {projects.map((project, i) => (
           <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
             <motion.img
@@ -31,12 +31,12 @@ function Projects({projects}: Props) {
             viewport={{once: true}}
             src={urlFor(project?.image).url()} 
             alt="Project Image Icon"
-            className='h-[200px] w-[300px] rounded-xl'
+            className='h-[200px] w-[300px] rounded-xl shadow-2xl'
             />
 
             <div className='space-y-10 px-10 md:px-10 max-w-6xl'>
               <h4 className='text-2xl font-semibold text-center md:text-4xl'>
-                <span className='uderline decoration-[#F7AB0A]/50'>
+                <span className='uderline decoration-[#0ea5e9]/50'>
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
                 {project?.title}
@@ -60,7 +60,7 @@ function Projects({projects}: Props) {
           </div>
         ))}
       </div>
-      <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12'></div>
+      <div className='w-full absolute top-[30%] bg-[#0284c7]/10 left-0 h-[500px] -skew-y-12'></div>
     </motion.div>
   )
 }

@@ -36,21 +36,21 @@ export default function Hero({pageInfo}: Props) {
             </h2>
             <h3 className='text-2xl lg:text-4xl font-semibold tracking-[7px]'>
                 <span className='mr-3'>{text}</span>
-                <Cursor cursorColor="#F7AB0A"/>
+                <Cursor cursorColor="#0284c7"/>
             </h3>
 
             <div className='pt-5'>
                 <Link href="#about">
-                    <button className='heroButton'>About</button>
+                    <button className='heroButton bg-[#e0f2fe]'>About</button>
                 </Link>
                 {/* <Link href="#experience">
                     <button className='heroButton'>Experience</button>
                 </Link> */}
                 <Link href="#skills">
-                    <button className='heroButton'>Skills</button>
+                    <button className='heroButton bg-[#e0f2fe]'>Skills</button>
                 </Link>
                 <Link href="#projects">
-                    <button className='heroButton'>Projects</button>
+                    <button className='heroButton bg-[#e0f2fe]'>Projects</button>
                 </Link>
             </div>
         </div>
