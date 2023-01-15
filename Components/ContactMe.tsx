@@ -27,8 +27,8 @@ function ContactMe({}: Props) {
         </h3>
 
         <div className='flex flex-col space-y-5'>
-            <h4 className='text-1xl font-semibold text-center md:text-3xl'>
-                I have got just what you need.{' '}
+            <h4 className='text-[13px] font-semibold text-center md:text-[15px]'>
+                I am interested in full-time opportunities. However, if you have any other requests or questions, don't hesitate to contact me using the below form either. I have got just what you need.{' '}
                 <span className='decoration-[#0ea5e9]/50 underline'>Lets Talk.</span>
             </h4>
 
