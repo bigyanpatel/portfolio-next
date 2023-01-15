@@ -26,7 +26,7 @@ export default function Hero({pageInfo}: Props) {
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles/>
         <img
-        className='relative rounded-full h-32 w-32 mx-auto object-cover'
+        className='relative rounded-full h-32 w-32 mx-auto object-cover shadow-2xl'
         src={urlFor(pageInfo?.profilePic).url()}
         alt="Picture of the author"
         />
