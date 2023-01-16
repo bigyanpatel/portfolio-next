@@ -2,7 +2,6 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Project } from '../typings';
 import { urlFor } from '../sanity';
-import { log } from 'console';
 
 type Props = {
   projects: Project[];
@@ -43,7 +42,10 @@ function Projects({projects}: Props) {
               >
                 Demo
               </button>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button 
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => window.open(`${project.linkToCode}`, "_blank")}   
+              >
                 Source Code
               </button>
             </div>
